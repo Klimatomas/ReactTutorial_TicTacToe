@@ -51,3 +51,15 @@ ol, ul {
 .game-info {
     margin-left: 20px;
 }
+
+.win{
+    background: #9ddd00;
+}
+
+.X{
+    background: #9ddd00;
+}
+
+.O{
+    background: #dd0014;
+}

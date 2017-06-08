@@ -4,7 +4,7 @@ import './index.css';
 
 function Square(props) {
     return (
-        <button className="square" onClick={props.onClick} >
+        <button className={"square".concat(props.classT ? " ".concat(props.classT) : "")} onClick={props.onClick}>
             {props.value}
         </button>
     );
@@ -16,7 +16,7 @@ class Board extends React.Component {
         return <Square
             value={this.props.squares[buttonID]}
             onClick={() => this.props.onClick(buttonID)}
-            something = {buttonID}
+            classT ={this.props.class}
         />;
     }
 
@@ -50,6 +50,7 @@ class Game extends React.Component {
             history: [{
                 squares: new Array(9).fill(null),
             }],
+            class: "holyshit",
             xIsNext: true,
         };
     }
